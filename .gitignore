@@ -1,0 +1,52 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+coverage/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+service-account*.json
+*service-account*.json
+*-firebase-adminsdk-*.json
+
+# IDE and operating system
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+# Generated package and deployment tooling
+*.egg-info/
+.vercel/
+.firebase/
+firebase-debug.log*
+ui-debug.log*
+npm-debug.log*
+
+# Terraform local state, cache, plans, and overrides
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc

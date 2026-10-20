@@ -1,0 +1,21 @@
+{
+  "name": "shieldiq",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "python -m uvicorn app.main:app --reload --port 8000 --app-dir apps/api",
+    "dev:web": "npm run dev --workspace @shieldiq/web",
+    "build:web": "npm run build --workspace @shieldiq/web",
+    "lint:web": "npm run lint --workspace @shieldiq/web",
+    "typecheck:web": "npm run typecheck --workspace @shieldiq/web",
+    "test:api": "python -m pytest apps/api/tests -q"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
